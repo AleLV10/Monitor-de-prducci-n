@@ -24,7 +24,7 @@ def iniciar_sesion():
     if entrada_usuario.get()!="":
         usuario=entrada_usuario.get()
         contaseña=entrada_contrasena.get()
-        conn=Coneccion.coneccion(host = '192.168.128.51', database='E:\\Sys\\Microsip datos\\COPAC 2024.FDB', user=usuario, password=contaseña,accion="consulta",consulta="",datos={})
+        conn=Coneccion.coneccion(host = 'IP DEL SERVIDOR', database='RUTA BD EN SERVIDOR', user=usuario, password=contaseña,accion="consulta",consulta="",datos={})
         if conn=="Conexión exitosa a Firebird!":
             cerrar_ventana(root)
             abrir_nueva_ventana(usuario,contaseña)
@@ -58,14 +58,14 @@ label.place(relx=0.5, rely=0, anchor=tk.N)
 # Etiqueta y entrada de texto para el usuario
 label_usuario = tk.Label(root, text="Usuario:", bg="#F2F7F7", font=("Arial", 12))
 label_usuario.place(relx=0.1, rely=0.55, anchor=tk.W)
-texto_por_defecto = tk.StringVar(value="SYSDBA")
+texto_por_defecto = tk.StringVar(value="Usuario")
 entrada_usuario = tk.Entry(root, width=30, textvariable=texto_por_defecto, font=("Arial", 12), bd=2, )
 entrada_usuario.place(relx=0.28, rely=0.5)
 
 # Etiqueta y entrada de texto para la contraseña
 label_contrasena = tk.Label(root, text="Contraseña:", bg="#F2F7F7", font=("Arial", 12))
 label_contrasena.place(relx=0.034, rely=0.68, anchor=tk.W)
-texto_por_defecto1 = tk.StringVar(value="masterkey")
+texto_por_defecto1 = tk.StringVar(value="Contraseña")
 entrada_contrasena = tk.Entry(root, width=30, show="*", textvariable=texto_por_defecto1, font=("Arial", 12), bd=2,)
 entrada_contrasena.place(relx=0.28, rely=0.63)
 
