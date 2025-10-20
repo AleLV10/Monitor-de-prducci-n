@@ -1,0 +1,1 @@
+El monitor de producción es un sistema que muestra en tiempo real el estado de las máquinas, la producción por turno y los kilos fabricados. Permite supervisar el rendimiento, detectar fallas, optimizar procesos y mantener un control visual y actualizado de la eficiencia en planta.
